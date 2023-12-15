@@ -1,4 +1,5 @@
-Note: The project cannot run because of the deletion of the data files for privacy reasons.
+Note: This tool was developed as part of a research project in collaboration with thyssenkrupp and was crafted by a team of six students from WWU. 
+The project cannot run because of the deletion of the data files for privacy reasons.
 
 # Introduction
 
