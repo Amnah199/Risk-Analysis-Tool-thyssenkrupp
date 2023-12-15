@@ -1,0 +1,160 @@
+h4 {
+  color: white;
+}
+
+#graph,
+#collapsable {
+  color: rgb(255, 255, 255);
+  stroke-width: 0;
+  background-color: #003c7d79;
+  border-color: transparent;
+  min-height: 45px;
+  width: 50px;
+  border-radius: 18px;
+}
+
+#treeWrapper {
+  width: 100vw;
+  height: calc(100vh - 198px) !important;
+  height: -moz-calc(100vh - 198px) !important;
+}
+
+.additional-settings {
+  background-color: #0094d8ab;
+  width: calc(100vw + 12px);
+  margin-left: -12px;
+  padding: 10px;
+  color: white;
+}
+
+.rect {
+  width: 400px;
+  height: auto;
+  background-color: #13a3e6;
+  border-radius: 40px;
+}
+
+.grid-container {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.grid-item {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 4;
+}
+.div3 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div4 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div5 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.div7 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.div8 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div9 {
+  grid-area: 3 / 2 / 4 / 5;
+}
+
+.div11 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.div12 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.div13 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.div14 {
+  grid-area: 4 / 4 / 5 / 5;
+}
+.div15 {
+  grid-area: 5 / 1 / 6 / 5;
+}
+
+.div21 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div22 {
+  grid-area: 1 / 2 / 2 / 4;
+}
+.div23 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div24 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div25 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div26 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.div27 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.div28 {
+  grid-area: 3 / 1 / 4 / 5;
+}
+
+.div31 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div32 {
+  grid-area: 1 / 2 / 2 / 4;
+}
+.div33 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div34 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div35 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div36 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.div37 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.div38 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div39 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div310 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.div311 {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.div312 {
+  grid-area: 4 / 1 / 5 / 5;
+}
+
+/* #graphIcon:hover {
+  color: rgb(185, 185, 185);
+  font-size: 23px;
+  padding-left: 2px;
+  stroke-width: 0;
+} */

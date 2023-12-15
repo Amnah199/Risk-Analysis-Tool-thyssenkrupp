@@ -1,0 +1,196 @@
+ // const margin = { top: 40, right: 20, bottom: -20, left: -20 },
+  //   width = 960 - margin.left - margin.right,
+  //   height = 280 - margin.top - margin.bottom,
+  //   color = "OrangeRed";
+
+  // const [activeIndex, setActiveIndex] = useState(null),
+  //   [data, setData] = useState([]);
+
+  // d3.select(svgRef.current).selectAll("*").remove();
+  // read from csv and format variables
+  // let data = await d3.csv(url);
+  // console.log("CSV:", data);
+  // let parseTime = d3.timeParse("%Y-%m-%d");
+  // data.forEach((d) => {
+  //   d.date = parseTime(d.date);
+  //   d.value = +d.value;
+  // });
+
+  // set the dimensions and margins of the graph
+  // var margin = { top: 20, right: 20, bottom: 50, left: 70 },
+  //   width = modalRef.current.clientWidth - margin.left - margin.right,
+  //   height = window.innerHeight / 2 - margin.top - margin.bottom;
+
+  // get Data
+  // useEffect(() => {
+  //   d3.csv(url).then((d) => {
+  //     console.log("d1", d);
+  //     d = d.reverse();
+  //     console.log("d2", d);
+  //     const parseTime = d3.timeParse("%Y-%m-%d");
+  //     d.forEach((i) => {
+  //       i.date = parseTime(i.date);
+  //       i.value = +i.value;
+  //     });
+  //     console.log("d3", d);
+  //     setData(d);
+  //     console.log("data", data);
+  //   });
+  //   return () => undefined;
+  // }, []);
+
+  // // Set Min Max
+  // const yMinValue = d3.min(data, (d) => d.value),
+  //   yMaxValue = d3.max(data, (d) => d.value);
+
+  // // X, Y Axis
+  // const getX = d3
+  //   .scaleTime()
+  //   .domain(d3.extent(data, (d) => d.date))
+  //   .range([0, width]);
+
+  // const getY = d3
+  //   .scaleLinear()
+  //   .domain([yMinValue - 1, yMaxValue + 2])
+  //   .range([height, 0]);
+
+  // const getXAxis = (ref) => {
+  //   const xAxis = d3.axisBottom(getX);
+  //   d3.select(ref).call(xAxis.tickFormat(d3.timeFormat("%b")));
+  // };
+
+  // const getYAxis = (ref) => {
+  //   const yAxis = d3.axisLeft(getY).tickSize(-width).tickPadding(7);
+  //   d3.select(ref).call(yAxis);
+  // };
+
+  // //Line and Area
+  // const linePath = d3
+  //   .line()
+  //   .x((d) => getX(d.date))
+  //   .y((d) => getY(d.value))
+  //   .curve(d3.curveMonotoneX)(data);
+
+  // const areaPath = d3
+  //   .area()
+  //   .x((d) => getX(d.date))
+  //   .y0((d) => getY(d.value))
+  //   .y1(() => getY(yMinValue - 1))
+  //   .curve(d3.curveMonotoneX)(data);
+
+  // //Event Handler
+  // const handleMouseMove = (e) => {
+  //   const bisect = d3.bisector((d) => d.date).left,
+  //     x0 = getX.invert(d3.pointer(e, this)[0]),
+  //     index = bisect(data, x0, 1);
+  //   setActiveIndex(index);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setActiveIndex(null);
+  // };
+
+  // window.onresize = () => {
+  //   createGraph();
+  // };
+
+  // const createGraph = async () => {
+    // // append the svg object to the body of the page
+    // var svg = d3
+    //   .select(svgRef.current)
+    //   .attr("width", width + margin.left + margin.right)
+    //   .attr("height", height + margin.top + margin.bottom)
+    //   .append("g")
+    //   .attr("transform", `translate(${margin.left},${margin.top})`);
+    // // Add X axis and Y axis
+    // var x = d3.scaleTime().range([0, width]);
+    // var y = d3.scaleLinear().range([height, 0]);
+    // x.domain(
+    //   d3.extent(data, (d) => {
+    //     return d.date;
+    //   })
+    // );
+    // y.domain([
+    //   0,
+    //   d3.max(data, (d) => {
+    //     return d.value;
+    //   }),
+    // ]);
+    // svg
+    //   .append("g")
+    //   .attr("transform", `translate(0, ${height})`)
+    //   .call(d3.axisBottom(x));
+    // svg.append("g").call(d3.axisLeft(y));
+    // // This allows to find the closest X index of the mouse:
+    // var bisect = d3.bisector((d) => {
+    //   console.log("d-x", d.x);
+    //   return d.x;
+    // }).left;
+    // // Create the circle that travels along the curve of chart
+    // var focus = svg
+    //   .append("g")
+    //   .append("circle")
+    //   .style("fill", "none")
+    //   .attr("stroke", "black")
+    //   .attr("r", 8.5)
+    //   .style("opacity", 0);
+    // // Create the text that travels along the curve of chart
+    // var focusText = svg
+    //   .append("g")
+    //   .append("text")
+    //   .style("opacity", 0)
+    //   .attr("text-anchor", "left")
+    //   .attr("alignment-baseline", "middle");
+    // // add the Line
+    // svg
+    //   .append("path")
+    //   .data([data])
+    //   .attr("class", "line")
+    //   .attr("fill", "#0094d836")
+    //   .attr("stroke", "#0094d8")
+    //   .attr("stroke-width", 1.75)
+    //   .attr(
+    //     "d",
+    //     d3
+    //       .area()
+    //       .x(function (d) {
+    //         return x(d.date);
+    //       })
+    //       .y0(y(0))
+    //       .y1(function (d) {
+    //         return y(d.value);
+    //       })
+    //   );
+    // // Create a rect on top of the svg area: this rectangle recovers mouse position
+    // svg
+    //   .append("rect")
+    //   .style("fill", "none")
+    //   .style("pointer-events", "all")
+    //   .attr("width", width)
+    //   .attr("height", height)
+    //   .on("mouseover", mouseover)
+    //   .on("mousemove", mousemove)
+    //   .on("mouseout", mouseout);
+    // // What happens when the mouse move -> show the annotations at the right positions.
+    // function mouseover() {
+    //   focus.style("opacity", 1);
+    //   focusText.style("opacity", 1);
+    // }
+    // function mousemove() {
+    //   // recover coordinate we need
+    //   var x0 = x.invert(d3.pointer(this)[0]);
+    //   var i = bisect(data, x0, 1);
+    //   console.log("i", i);
+    //   var selectedData = data;
+    //   console.log("Data", data[i]);
+    //   focus.attr("cx", x(selectedData.x)).attr("cy", y(selectedData.y));
+    //   focusText
+    //     .html("x:" + selectedData.x + "  -  " + "y:" + selectedData.y)
+    //     .attr("x", x(selectedData.x) + 15)
+    //     .attr("y", y(selectedData.y));
+    // }
+    // function mouseout() {
+    //   focus.style("opacity", 0);
+    //   focusText.style("opacity", 0);
+    // }
+  // };

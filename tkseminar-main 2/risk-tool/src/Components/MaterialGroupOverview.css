@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    --background-color:rgb(51, 110, 150);
+    align-items:center
+}
+
+#chart{
+    flex: 1;
+}
+.table-container{
+    height: 100%;
+}

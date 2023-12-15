@@ -1,0 +1,6 @@
+Zinc: https://www.investing.com/commodities/zinc-futures-historical-data?cid=956470
+Nickel: https://www.investing.com/commodities/nickel-historical-data?cid=959208
+Aluminium Price: https://www.investing.com/commodities/aluminum-historical-data
+USDollarIndex: https://www.investing.com/indices/commodities-indices
+Brent Oil: https://www.investing.com/commodities/brent-oil-historical-data
+

@@ -1,0 +1,14 @@
+pip install flask
+pip install -U flask-cors
+pip install pandas
+pip install mysql-connector
+
+npm install react-bootstrap bootstrap
+npm install react
+npm install react-d3-tree
+npm install d3
+npm install @mui/system
+npm install @mui/icons-material
+npm install @mui/material @emotion/react @emotion/styled
+npm install axios
+npm i -D @craco/craco
